@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Panneau de commandes
+      </ion-card-title>
+      <ion-item>
+      <ion-label>Marche</ion-label>
+      <ion-toggle [(ngModel)]="marche" checked="false" color="danger"></ion-toggle>
+      </ion-item>
+      <ion-item>
+      <ion-label>Mode</ion-label>
+        <ion-select [(ngModel)]="mode" [disabled]="marche==false">
+          <ion-option value="Smooth">Smooth</ion-option>
+          <ion-option value="Beat">Beat</ion-option>
+          <ion-option value="Slide">Slide</ion-option>
+      </ion-select>
+      </ion-item>
+      <ion-range [disabled]="marche!=true" min="0" max="100" pin="true" color="yellow">
+        <ion-icon range-left small name="sunny"></ion-icon>
+        <ion-icon range-right name="sunny"></ion-icon>
+      </ion-range>
+        <ion-range [disabled]="marche!=true" min="0" max="100" pin="true" color="blue">
+        <ion-icon range-left small name="flash"></ion-icon>
+        <ion-icon range-right name="flash"></ion-icon>
+      </ion-range>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
