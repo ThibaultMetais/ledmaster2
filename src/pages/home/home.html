@@ -12,7 +12,7 @@
       </ion-card-title>
       <ion-item>
       <ion-label>Marche</ion-label>
-      <ion-toggle [(ngModel)]="marche" checked="false" color="danger"></ion-toggle>
+      <ion-toggle [(ngModel)]="marche" (ionChange)="updateOnOff()" checked="false" color="danger"></ion-toggle>
       </ion-item>
       <ion-item>
       <ion-label>Mode</ion-label>

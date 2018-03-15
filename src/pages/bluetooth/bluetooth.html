@@ -9,13 +9,8 @@
 <ion-content padding>
 
   <ion-list padding>
-    <button ion-button block (click)="startScanning()">Scan</button>
-    <ion-list-header>
-      Paired Devices
-    </ion-list-header>
-    <ion-item *ngFor="let device of pairedDevices">
-      {{device.name}}
-    </ion-item>
+    <button ion-button block (click)="selectDevice(defaultDevice)">Fast Connect</button>
+    <button ion-button block (click)="startScanning()">Manual Scan</button>
     <button ion-button block (click)="disconnect()">Disconnect</button>
     <ion-list-header>
       availlable Devices

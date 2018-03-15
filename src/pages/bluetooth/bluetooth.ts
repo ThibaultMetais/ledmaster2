@@ -13,7 +13,10 @@ export class BluetoothPage {
   pairedDevices: any;
   gettingDevices: Boolean;
 
+  defaultDevice: String;
+
   constructor(public navCtrl: NavController, private bluetoothSerial: BluetoothSerial, private alertCtrl: AlertController) {
+    this.defaultDevice = "98:D3:31:30:2E:76";
 
     bluetoothSerial.enable();
 
