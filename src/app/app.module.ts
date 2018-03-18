@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
+import { BluetoothProvider } from '../providers/bluetooth/bluetooth';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
     StatusBar,
     SplashScreen,
     BluetoothSerial,
+    BluetoothProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
